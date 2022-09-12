@@ -16,15 +16,17 @@ const Navbar = ({ show, search }) => {
         </Link>
         {show ? (
           <div className="flex items-center space-x-4">
-            {search ? (
-              ""
-            ) : (
-              <Link to="/search">
-                <AiOutlineSearch className="w-8 h-8 text-white" />
-              </Link>
-            )}
             {signed ? (
-              <Account />
+              <>
+                {search ? (
+                  ""
+                ) : (
+                  <Link to="/search">
+                    <AiOutlineSearch className="w-8 h-8 text-white" />
+                  </Link>
+                )}
+                <Account />
+              </>
             ) : (
               <>
                 <div className="hidden space-x-2 sm:flex">

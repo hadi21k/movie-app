@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-image": "url('./src/Assets/hero-image.webp')",
+        "hero-image": "url('https://cutt.ly/LCL5lDf')",
         "animate-download":
           "url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif')",
       },
