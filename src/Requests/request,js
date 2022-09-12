@@ -1,0 +1,13 @@
+export const key = "b88e1dfe4fdfe22e000995fcc390926c";
+
+export const url = {
+  requestNowPlaying: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=1`,
+  requestTv: `https://api.themoviedb.org/3/tv/popular?api_key=${key}&language=en-US&page=1`,
+  requestTopRated: `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`,
+  requestTrending: `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=2`,
+  requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`,
+  requestAction: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=28`,
+  requestComedy: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=35`,
+  requestHorror: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=27`,
+  requestRomance: `https://api.themoviedb.org/3/discover/movie?api_key=${key}&with_genres=10749`,
+};
