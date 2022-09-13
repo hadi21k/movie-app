@@ -1,7 +1,21 @@
+import { arrayRemove, doc, updateDoc } from "firebase/firestore";
 import { motion } from "framer-motion";
+import { auth, db } from "../Firebase/firebase";
 
 const ListData = ({ movie }) => {
-  console.log(movie);
+  const user = auth.currentUser;
+  const removeFromList = async () => {
+    if (user) {
+      const userRef = doc(db, "users", user.uid);
+      await updateDoc(
+        userRef,
+        {
+          list: arrayRemove(movie),
+        },
+        { merge: true }
+      );
+    }
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -20,8 +34,14 @@ const ListData = ({ movie }) => {
         className="object-cover w-full h-full text-white rounded"
         loading="lazy"
       />
-      <div className="absolute top-0 grid w-full h-full p-4 text-lg font-bold text-center text-white transition duration-200 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 backdrop-filter backdrop-blur-md place-items-center">
-        {movie.title}
+      <div className="absolute top-0 flex flex-col justify-between w-full h-full px-4 py-8 space-y-2 text-lg font-bold text-center text-white transition duration-200 bg-black opacity-0 group-hover:opacity-100 bg-opacity-40 backdrop-filter backdrop-blur-md">
+        <h1>{movie.title}</h1>
+        <div
+          onClick={removeFromList}
+          className="p-2 font-semibold text-black bg-white rounded"
+        >
+          Remove from list
+        </div>
       </div>
     </motion.div>
   );

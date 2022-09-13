@@ -27,17 +27,6 @@ const Account = () => {
       <Menu.Items className="absolute w-[200px] py-4 px-2 rounded top-[80px] right-6 bg-black backdrop-filter bg-opacity-50 backdrop-blur-md outline-none">
         <Menu.Item>
           {({ active }) => (
-            <div
-              className={`rounded-lg px-2 py-4 text-white font-semibold cursor-pointer ${
-                active ? "bg-[#e50914]" : ""
-              }`}
-            >
-              Account
-            </div>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
             <Link to="/mylist">
               <div
                 className={`rounded-lg px-2 py-4 text-white font-semibold cursor-pointer ${

@@ -7,14 +7,15 @@ import Signin from "./Pages/Signin";
 import Search from "./Pages/Search";
 import Main from "./Pages/Main";
 import UserList from "./Pages/UserList";
+import { auth } from "./Firebase/firebase";
 
 function App() {
-  const signedIn = JSON.parse(localStorage.getItem("signedIn"));
+  const user = auth.currentUser;
   const location = useLocation();
-  if (signedIn && location.pathname === "/") {
+  if (user !== null && location.pathname === "/") {
     return <Navigate to="/dashboard" />;
   }
-  if (!signedIn && location.pathname === "/dashboard") {
+  if (user === null && location.pathname === "/dashboard") {
     return <Navigate to="/" />;
   }
 

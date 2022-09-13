@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
 import { url } from "../../Requests/request,js";
 import HeroMovieContent from "./HeroMovieContent";
 

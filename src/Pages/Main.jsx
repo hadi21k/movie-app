@@ -1,7 +1,10 @@
 import HeroMovie from "../Components/Dashboard/HeroMovie";
 import ScrollData from "../Components/Dashboard/ScrollData";
+import { auth } from "../Firebase/firebase";
 import { url } from "../Requests/request,js";
 const Main = () => {
+  const user = auth.currentUser;
+  console.log(user);
   return (
     <div className="min-h-screen bg-black">
       <HeroMovie />

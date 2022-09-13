@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import Logo from "./Logo";
 import Account from "./Account";
+import { auth } from "../Firebase/firebase";
 
 const Navbar = ({ show, search }) => {
-  const signed = JSON.parse(localStorage.getItem("signedIn"));
+  const user = auth.currentUser;
   return (
     <div className="absolute h-[65px] top-0 w-full z-50">
       <div className="container relative flex items-center justify-between px-6 mx-auto">
@@ -16,7 +17,7 @@ const Navbar = ({ show, search }) => {
         </Link>
         {show ? (
           <div className="flex items-center space-x-4">
-            {signed ? (
+            {user ? (
               <>
                 {search ? (
                   ""

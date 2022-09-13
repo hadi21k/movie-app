@@ -14,7 +14,6 @@ const UserList = () => {
       setList(doc.data().list);
     });
   }, [user]);
-  console.log(list);
   return (
     <div className="pt-[80px] bg-black min-h-screen">
       <div className="container px-6 mx-auto">
