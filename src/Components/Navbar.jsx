@@ -6,12 +6,13 @@ import { AiOutlineSearch } from "react-icons/ai";
 import Logo from "./Logo";
 import Account from "./Account";
 import { auth } from "../Firebase/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Navbar = ({ show, search }) => {
-  const user = auth.currentUser;
+  const [user] = useAuthState(auth);
   return (
-    <div className="absolute h-[65px] top-0 w-full z-50">
-      <div className="container relative flex items-center justify-between px-6 mx-auto">
+    <div className="absolute h-[75px] top-0 w-full z-50">
+      <div className="container relative flex items-center justify-between px-6 mx-auto h-full">
         <Link to="/dashboard">
           <Logo />
         </Link>

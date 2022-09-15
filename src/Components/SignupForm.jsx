@@ -40,10 +40,10 @@ const SignupForm = () => {
         value={values.firstname}
         onBlur={handleBlur}
         id="firstname"
-        className={`input ${errors.firstname} && ${touched.firstname} ? "border border-[#e50914] outline-0 error-animate" : ""`}
+        className={`input ${errors.firstname} && ${touched.firstname} ? "border border-[#D62560] outline-0 error-animate" : ""`}
       />
       {errors.firstname && touched.firstname && (
-        <p className="text-sm -mt-2 text-[#e50914] font-semibold">
+        <p className="text-sm -mt-2 text-[#D62560] font-semibold">
           {errors.firstname}
         </p>
       )}
@@ -54,10 +54,10 @@ const SignupForm = () => {
         value={values.lastname}
         onBlur={handleBlur}
         id="lastname"
-        className={`input ${errors.lastname} && ${touched.lastname} ? "border border-[#e50914] outline-0 error-animate" : ""`}
+        className={`input ${errors.lastname} && ${touched.lastname} ? "border border-[#D62560] outline-0 error-animate" : ""`}
       />
       {errors.lastname && touched.lastname && (
-        <p className="text-sm -mt-2 text-[#e50914] font-semibold">
+        <p className="text-sm -mt-2 text-[#D62560] font-semibold">
           {errors.lastname}
         </p>
       )}
@@ -68,10 +68,10 @@ const SignupForm = () => {
         value={values.email}
         onBlur={handleBlur}
         id="email"
-        className={`input ${errors.email} && ${touched.email} ? "border border-[#e50914] outline-0 error-animate" : ""`}
+        className={`input ${errors.email} && ${touched.email} ? "border border-[#D62560] outline-0 error-animate" : ""`}
       />
       {errors.email && touched.email && (
-        <p className="text-sm -mt-2 text-[#e50914] font-semibold">
+        <p className="text-sm -mt-2 text-[#D62560] font-semibold">
           {errors.email}
         </p>
       )}
@@ -82,10 +82,10 @@ const SignupForm = () => {
         value={values.password}
         onBlur={handleBlur}
         id="password"
-        className={`input ${errors.email} && ${touched.email} ? "border border-[#e50914] outline-0 error-animate" : ""`}
+        className={`input ${errors.email} && ${touched.email} ? "border border-[#D62560] outline-0 error-animate" : ""`}
       />
       {errors.password && touched.password && (
-        <p className="text-sm -mt-2 text-[#e50914] font-semibold">
+        <p className="text-sm -mt-2 text-[#D62560] font-semibold">
           {errors.password}
         </p>
       )}
@@ -96,10 +96,10 @@ const SignupForm = () => {
         value={values.confirmPassword}
         onBlur={handleBlur}
         id="confirmPassword"
-        className={`input ${errors.confirmPassword} && ${touched.confirmPassword} ? "border border-[#e50914] outline-0 error-animate" : ""`}
+        className={`input ${errors.confirmPassword} && ${touched.confirmPassword} ? "border border-[#D62560] outline-0 error-animate" : ""`}
       />
       {errors.confirmPassword && touched.confirmPassword && (
-        <p className="text-sm -mt-2 text-[#e50914] font-semibold">
+        <p className="text-sm -mt-2 text-[#D62560] font-semibold">
           {errors.confirmPassword}
         </p>
       )}
@@ -111,7 +111,7 @@ const SignupForm = () => {
         <input
           type="submit"
           value="Sign In"
-          className="bg-[#e50914] text-white font-semibold px-2 py-4 grid place-items-center rounded cursor-pointer"
+          className="bg-[#D62560] text-white font-semibold px-2 py-4 grid place-items-center rounded cursor-pointer"
         />
       )}
     </form>

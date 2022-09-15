@@ -11,7 +11,6 @@ const Home = () => {
     <>
       <Hero />
       <Tv />
-      <Download />
       <Watch />
       <Kids />
       <Questions />

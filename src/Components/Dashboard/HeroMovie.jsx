@@ -14,7 +14,13 @@ const HeroMovie = () => {
       try {
         const result = await axios.get(url.requestTopRated);
         setMovies(
-          result.data.results.filter((movie) => movie.backdrop_path !== null)
+          result.data.results.filter(
+            (movie) =>
+              movie.backdrop_path !== null &&
+              movie.poster_path !== null &&
+              movie.overview !== "" &&
+              movie.original_language === "en"
+          )
         );
       } catch (err) {
         console.error(err);

@@ -9,7 +9,7 @@ const QuestionsBar = ({ question, a1, a2 }) => {
           {({ open }) => (
             <>
               <Disclosure.Button className="bg-[#303030] cursor-pointer w-full py-2 px-4 flex items-center justify-between">
-                <span>What is Netflix?</span>
+                <span>What is Hflix?</span>
                 <AiOutlineArrowDown
                   className={`${
                     open ? "rotate-180 transform" : ""
@@ -18,7 +18,7 @@ const QuestionsBar = ({ question, a1, a2 }) => {
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 bg-[#303030] text-white prose prose-headings:text-white">
                 <h4>
-                  Netflix is a streaming service that offers a wide variety of
+                  Hflix is a streaming service that offers a wide variety of
                   award-winning TV shows, movies, anime, documentaries, and more
                   on thousands of internet-connected devices.
                 </h4>
@@ -36,7 +36,7 @@ const QuestionsBar = ({ question, a1, a2 }) => {
           {({ open }) => (
             <>
               <Disclosure.Button className="bg-[#303030] cursor-pointer w-full py-2 px-4 flex items-center justify-between">
-                <span>How much does Netflix cost?</span>
+                <span>How much does Hflix cost?</span>
                 <AiOutlineArrowDown
                   className={`${
                     open ? "rotate-180 transform" : ""
@@ -45,7 +45,7 @@ const QuestionsBar = ({ question, a1, a2 }) => {
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 bg-[#303030] text-white prose prose-headings:text-white">
                 <h4>
-                  Watch Netflix on your smartphone, tablet, Smart TV, laptop, or
+                  {/* Watch Hflix on your smartphone, tablet, Smart TV, laptop, or */}
                   streaming device, all for one fixed monthly fee. Plans range
                   from USD7.99 to USD11.99 a month. No extra costs, no
                   contracts.
@@ -67,17 +67,17 @@ const QuestionsBar = ({ question, a1, a2 }) => {
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 bg-[#303030] text-white prose prose-headings:text-white">
                 <h4>
-                  Watch anywhere, anytime. Sign in with your Netflix account to
-                  watch instantly on the web at netflix.com from your personal
+                  Watch anywhere, anytime. Sign in with your Hflix account to
+                  watch instantly on the web at hflix.com from your personal
                   computer or on any internet-connected device that offers the
-                  Netflix app, including smart TVs, smartphones, tablets,
+                  hflix app, including smart TVs, smartphones, tablets,
                   streaming media players and game consoles.
                 </h4>
                 <h6>
                   You can also download your favorite shows with the iOS,
                   Android, or Windows 10 app. Use downloads to watch while
                   you're on the go and without an internet connection. Take
-                  Netflix with you anywhere.
+                  Hflix with you anywhere.
                 </h6>
               </Disclosure.Panel>
             </>
@@ -96,7 +96,7 @@ const QuestionsBar = ({ question, a1, a2 }) => {
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 bg-[#303030] text-white prose prose-headings:text-white">
                 <h4>
-                  Netflix is flexible. There are no pesky contracts and no
+                  Hflix is flexible. There are no pesky contracts and no
                   commitments. You can easily cancel your account online in two
                   clicks. There are no cancellation fees – start or stop your
                   account anytime.
@@ -109,7 +109,7 @@ const QuestionsBar = ({ question, a1, a2 }) => {
           {({ open }) => (
             <>
               <Disclosure.Button className="bg-[#303030] cursor-pointer w-full py-2 px-4 flex items-center justify-between">
-                <span>What can I watch on Netflix?</span>
+                <span>What can I watch on Hflix?</span>
                 <AiOutlineArrowDown
                   className={`${
                     open ? "rotate-180 transform" : ""
@@ -118,10 +118,9 @@ const QuestionsBar = ({ question, a1, a2 }) => {
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 bg-[#303030] text-white prose prose-headings:text-white">
                 <h4>
-                  Netflix has an extensive library of feature films,
-                  documentaries, TV shows, anime, award-winning Netflix
-                  originals, and more. Watch as much as you want, anytime you
-                  want.
+                  Hflix has an extensive library of feature films,
+                  documentaries, TV shows, anime, award-winning Hflix originals,
+                  and more. Watch as much as you want, anytime you want.
                 </h4>
               </Disclosure.Panel>
             </>
@@ -131,7 +130,7 @@ const QuestionsBar = ({ question, a1, a2 }) => {
           {({ open }) => (
             <>
               <Disclosure.Button className="bg-[#303030] cursor-pointer w-full py-2 px-4 flex items-center justify-between">
-                <span>Is Netflix good for Kids?</span>
+                <span>Is Hflix good for Kids?</span>
                 <AiOutlineArrowDown
                   className={`${
                     open ? "rotate-180 transform" : ""
@@ -140,7 +139,7 @@ const QuestionsBar = ({ question, a1, a2 }) => {
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 bg-[#303030] text-white prose prose-headings:text-white">
                 <h4>
-                  The Netflix Kids experience is included in your membership to
+                  The Hflix Kids experience is included in your membership to
                   give parents control while kids enjoy family-friendly TV shows
                   and movies in their own space.
                 </h4>

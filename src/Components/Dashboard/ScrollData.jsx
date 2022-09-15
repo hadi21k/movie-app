@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { auth } from "../../Firebase/firebase";
 import Movie from "./Movie";
@@ -7,11 +8,13 @@ import Movie from "./Movie";
 const ScrollData = ({ category, url }) => {
   const scrollbar = useRef();
   const [data, setData] = useState([]);
-  const user = auth.currentUser;
+  const [user] = useAuthState(auth);
   useEffect(() => {
     const fetchTrending = async () => {
       const result = await axios.get(url);
-      setData(result.data.results);
+      setData(
+        result.data.results.filter((movie) => movie.original_language != "ko")
+      );
     };
     fetchTrending();
   }, []);
@@ -22,13 +25,13 @@ const ScrollData = ({ category, url }) => {
     scrollbar.current.scrollLeft += scrollbar.current.offsetWidth;
   };
   return (
-    <div className="relative group ">
+    <div className="relative">
       <h1 className="px-4 mt-4 text-xl font-bold text-white sm:text-2xl">
         {category}
       </h1>
       <div
         onClick={scrollLeft}
-        className="absolute z-50 hidden p-1 transform -translate-y-1/2 bg-gray-400 rounded-full cursor-pointer top-1/2 left-4 group-hover:block"
+        className="absolute z-50 p-1 transform -translate-y-1/2 bg-gray-100 rounded-full cursor-pointer top-1/2 left-4"
       >
         <AiOutlineArrowLeft className="w-8 h-8 text-black" />
       </div>
@@ -42,7 +45,7 @@ const ScrollData = ({ category, url }) => {
       </div>
       <div
         onClick={scrollRight}
-        className="absolute z-50 hidden p-1 transform -translate-y-1/2 bg-gray-400 rounded-full cursor-pointer right-4 top-1/2 group-hover:block"
+        className="absolute z-50 p-1 transform -translate-y-1/2 bg-gray-100 rounded-full cursor-pointer right-4 top-1/2"
       >
         <AiOutlineArrowRight className="w-8 h-8 text-black" />
       </div>

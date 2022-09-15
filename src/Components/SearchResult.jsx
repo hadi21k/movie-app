@@ -40,7 +40,7 @@ const SearchResult = ({ movie }) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.2, ease: "linear" }}
+      transition={{ delay: 0.4, ease: "linear", duration: 0.5 }}
       viewport={{ once: true }}
       className="relative transition-all duration-300 cursor-pointer group"
     >

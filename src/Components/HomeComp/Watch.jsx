@@ -3,10 +3,6 @@ import HomeDetails from "./HomeDetails";
 const Watch = () => {
   return (
     <div className="bg-black min-h-[300px] py-8 border-b-8 border-[#222] grid grid-cols-1 gap-6 lg:grid-cols-2">
-      <HomeDetails
-        title="Watch everywhere."
-        description="Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more."
-      />
       <div className="relative grid place-items-center">
         <img
           className="z-20"
@@ -25,6 +21,10 @@ const Watch = () => {
           ></source>
         </video>
       </div>
+      <HomeDetails
+        title="Watch everywhere."
+        description="Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more."
+      />
     </div>
   );
 };

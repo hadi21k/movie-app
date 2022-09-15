@@ -23,8 +23,8 @@ const HeroMovieContent = ({ movie, isLoading }) => {
                 </>
               )}
             </div>
-            <h3 className="text-sm text-white">{movie?.release_date}</h3>
-            <p className="text-base font-semibold prose text-white">
+            <h3 className="text-sm text-white font-semibold">{movie?.release_date}</h3>
+            <p className="text-base font-semibold text-white prose max-w-xl">
               {movie?.overview.length > 500
                 ? movie?.overview.substring(0, 500) + "..."
                 : movie?.overview}

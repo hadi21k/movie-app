@@ -7,14 +7,8 @@ const Account = () => {
   const navigate = useNavigate();
   const userMenu = async () => {
     await signOut(auth);
-    const promise = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, 1000);
-    });
-    await promise;
-    localStorage.setItem("signedIn", false);
     navigate("/signin");
+    localStorage.setItem("signedIn", false);
   };
   return (
     <Menu>
@@ -30,7 +24,7 @@ const Account = () => {
             <Link to="/mylist">
               <div
                 className={`rounded-lg px-2 py-4 text-white font-semibold cursor-pointer ${
-                  active ? "bg-[#e50914]" : ""
+                  active ? "bg-[#D62560]" : ""
                 }`}
               >
                 My List
@@ -43,7 +37,7 @@ const Account = () => {
             <div
               onClick={userMenu}
               className={`rounded-lg px-2 py-4 text-white font-semibold cursor-pointer ${
-                active ? "bg-[#e50914]" : ""
+                active ? "bg-[#D62560]" : ""
               }`}
             >
               Sign Out

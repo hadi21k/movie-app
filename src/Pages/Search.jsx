@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useFormik } from "formik";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import SearchResult from "../Components/SearchResult";

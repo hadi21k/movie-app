@@ -18,13 +18,13 @@ const Sidemenu = () => {
           leaveFrom="opacity-100"
           leaveTo="transform opacity-0 translate-y-[-150px]"
         >
-          <Menu.Items className=" inset-0 flex flex-col items-center justify-center w-full h-screen text-white bg-black bg-opacity-50 rounded -z-10 backdrop-blur-md absolute">
+          <Menu.Items className="inset-0 flex flex-col items-center justify-center w-full h-screen text-white bg-black bg-opacity-50 rounded -z-10 backdrop-blur-md absolute">
             <Menu.Item>
               {({ active }) => (
                 <Link to="/signin">
                   <div
                     className={`px-2 py-5 font-medium rounded transition duration-300 ${
-                      active ? "text-[#e50914]" : ""
+                      active ? "text-[#D62560]" : ""
                     }`}
                   >
                     Sign In
@@ -37,7 +37,7 @@ const Sidemenu = () => {
                 <Link to="/signup">
                   <div
                     className={`px-2 py-5 font-medium rounded transition duration-300 ${
-                      active ? "text-[#e50914]" : ""
+                      active ? "text-[#D62560]" : ""
                     }`}
                   >
                     Sign Up

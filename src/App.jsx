@@ -8,17 +8,18 @@ import Search from "./Pages/Search";
 import Main from "./Pages/Main";
 import UserList from "./Pages/UserList";
 import { auth } from "./Firebase/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function App() {
-  const user = auth.currentUser;
+  const [user] = useAuthState(auth);
   const location = useLocation();
+
   if (user !== null && location.pathname === "/") {
     return <Navigate to="/dashboard" />;
   }
   if (user === null && location.pathname === "/dashboard") {
     return <Navigate to="/" />;
   }
-
   return (
     <div>
       <Routes>
