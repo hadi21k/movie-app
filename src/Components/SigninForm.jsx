@@ -25,7 +25,7 @@ const SigninForm = () => {
         await promise;
         localStorage.setItem("signedIn", true);
         setLoading(false);
-        navigate("/dashboard");
+        navigate("/");
       },
     });
   return (

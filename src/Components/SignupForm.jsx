@@ -26,7 +26,7 @@ const SignupForm = () => {
           }, 1500);
         });
         await promise;
-        navigate("/dashboard");
+        navigate("/");
         localStorage.setItem("signedIn", true);
         setLoading(false);
       },

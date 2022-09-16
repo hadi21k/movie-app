@@ -13,7 +13,6 @@ export const signupSchema = yup.object().shape({
   password: yup
     .string()
     .min(5)
-    .matches(passwordRules, { message: "Please create a stronger password" })
     .required("Required"),
   confirmPassword: yup
     .string()

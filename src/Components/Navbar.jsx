@@ -12,8 +12,8 @@ const Navbar = ({ show, search }) => {
   const [user] = useAuthState(auth);
   return (
     <div className="absolute h-[75px] top-0 w-full z-50">
-      <div className="container relative flex items-center justify-between px-6 mx-auto h-full">
-        <Link to="/dashboard">
+      <div className="container relative flex items-center justify-between h-full px-6 mx-auto">
+        <Link to="/">
           <Logo />
         </Link>
         {show ? (

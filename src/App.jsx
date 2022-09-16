@@ -14,11 +14,12 @@ function App() {
   const [user] = useAuthState(auth);
   const location = useLocation();
 
-  if (user !== null && location.pathname === "/") {
-    return <Navigate to="/dashboard" />;
-  }
-  if (user === null && location.pathname === "/dashboard") {
+  if (user !== null && location.pathname === "/home") {
     return <Navigate to="/" />;
+  }
+  
+  if (user === null && location.pathname === "/") {
+    return <Navigate to="/home" />;
   }
   return (
     <div>
@@ -28,21 +29,21 @@ function App() {
           element={
             <>
               <Navbar show={true} />
+              <Main />
+            </>
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <>
+              <Navbar show={true} />
               <Home />
             </>
           }
         />
         <Route path="signup" element={<Signup />} />
         <Route path="signin" element={<Signin />} />
-        <Route
-          path="dashboard"
-          element={
-            <>
-              <Navbar show={true} />
-              <Main />
-            </>
-          }
-        />
         <Route
           path="search"
           element={
