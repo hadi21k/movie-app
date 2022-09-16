@@ -1,12 +1,25 @@
+import axios from "axios";
 import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import { BsBookmarkPlus, BsPlayFill } from "react-icons/bs";
 import { db } from "../../Firebase/firebase";
+import { key } from "../../Requests/request,js";
 
-const Movie = ({ movie, user }) => {
+const Movie = ({ movie, user, setTrailerId, setShowTrailer }) => {
   const [isBookmarked, setIsBookmarked] = useState(false);
+
+  const playTrailer = async () => {
+    const res = await axios.get(
+      `https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${key}&language=en-US`
+    );
+    setTrailerId(
+      res.data.results.filter((video) => video.type === "Trailer")[0].key
+    );
+    setShowTrailer(true);
+  };
+
   const addToList = async () => {
     setIsBookmarked(true);
     if (user) {
@@ -55,7 +68,10 @@ const Movie = ({ movie, user }) => {
           key={isBookmarked}
           className="absolute bottom-[5px] flex space-x-2 left-[50px] overflow-y-hidden"
         >
-          <div className="p-2 bg-white rounded-full cursor-pointer">
+          <div
+            onClick={playTrailer}
+            className="p-2 bg-white rounded-full cursor-pointer"
+          >
             <BsPlayFill className="w-6 h-6 text-black" />
           </div>
           {isBookmarked ? (
