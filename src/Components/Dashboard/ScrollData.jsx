@@ -17,7 +17,10 @@ const ScrollData = ({ category, url }) => {
     const fetchTrending = async () => {
       const result = await axios.get(url);
       setData(
-        result.data.results.filter((movie) => movie.original_language != "ko")
+        result.data.results.filter(
+          (movie) =>
+            movie.original_language != "ko" && movie.poster_path != null
+        )
       );
     };
     fetchTrending();

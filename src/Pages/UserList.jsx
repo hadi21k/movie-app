@@ -2,17 +2,20 @@ import { doc, onSnapshot } from "firebase/firestore";
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import ListData from "../Components/ListData";
 import { auth, db } from "../Firebase/firebase";
 
 const UserList = () => {
   const [list, setList] = useState([]);
-  const user = auth.currentUser;
+  const [user] = useAuthState(auth);
   useEffect(() => {
     const userRef = doc(db, "users", user.uid);
-    onSnapshot(userRef, (doc) => {
-      setList(doc.data().list);
-    });
+    if (user) {
+      onSnapshot(userRef, (doc) => {
+        setList(doc.data().list);
+      });
+    }
   }, [user]);
   return (
     <div className="pt-[80px] bg-black min-h-screen">

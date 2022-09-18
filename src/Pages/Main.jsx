@@ -9,7 +9,6 @@ const Main = () => {
       <ScrollData category="Action" url={url.requestAction} />
       <ScrollData category="Now Playing" url={url.requestNowPlaying} />
       <ScrollData category="Trending" url={url.requestTrending} />
-      <ScrollData category="Tv" url={url.requestTv} />
       <ScrollData category="Comedy" url={url.requestComedy} />
       <ScrollData category="Horror" url={url.requestHorror} />
       <ScrollData category="Romance" url={url.requestRomance} />

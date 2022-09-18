@@ -41,7 +41,7 @@ const HeroMovie = () => {
             movie?.backdrop_path &&
             `https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`
           }
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full object-center"
           loading="lazy"
         />
       )}

@@ -17,7 +17,7 @@ const Hero = () => {
             membership.
           </p>
         </div>
-        <Link to="signin">
+        <Link to="/signin">
           <div className="bg-[#D62560] font-medium py-2 px-3 text-white rounded cursor-pointer">
             Get Started
           </div>
