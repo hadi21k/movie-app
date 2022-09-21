@@ -63,7 +63,7 @@ const Search = () => {
           />
         </motion.div>
         {search.length != 0 && showTrailer && (
-          <div ref={videoRef}>
+          <div ref={videoRef} className="mt-4">
             <YouTube
               videoId={trailerId ? trailerId : ""}
               opts={opts}
