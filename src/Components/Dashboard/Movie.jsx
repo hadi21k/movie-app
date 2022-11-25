@@ -35,6 +35,7 @@ const Movie = ({ movie, user, setTrailerId, setShowTrailer }) => {
       alert("Please login to add to list");
     }
   };
+
   const removeFromList = () => {
     setIsBookmarked(false);
     if (user) {
@@ -48,13 +49,14 @@ const Movie = ({ movie, user, setTrailerId, setShowTrailer }) => {
       );
     }
   };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.1, ease: "linear" }}
       viewport={{ once: true }}
-      className="relative py-5 transition-all duration-300 transform cursor-pointer hover:pr-6 hover:scale-110 hover:z-30 "
+      className="relative py-5 transition-all duration-300 transform hover:pr-6 hover:scale-110 hover:z-[5]"
     >
       <div className="w-48 h-full rounded-lg">
         <img
